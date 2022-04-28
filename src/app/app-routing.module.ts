@@ -6,7 +6,7 @@ import { CareerComponent } from './career/career.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  {path:'home',component:HomeComponent},
   {path:'customer',component:CustomersComponent},
   {path:'career',component:CareerComponent},
   {path:'contact',component:ContactComponent}
