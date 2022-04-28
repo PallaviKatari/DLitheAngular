@@ -1,0 +1,126 @@
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laboriosam ipsa ad iste placeat. Voluptates rem repellat neque assumenda, reprehenderit nobis rerum sint numquam, ut debitis corporis nihil aperiam asperiores?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laboriosam ipsa ad iste placeat. Voluptates rem repellat neque assumenda, reprehenderit nobis rerum sint numquam, ut debitis corporis nihil aperiam asperiores?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laboriosam ipsa ad iste placeat. Voluptates rem repellat neque assumenda, reprehenderit nobis rerum sint numquam, ut debitis corporis nihil aperiam asperiores?</p>
+
+<!--STRING INTERPOLATION-->
+<h3>{{title}}</h3>
+<h2>{{course}}</h2>
+
+<!--PROPERTY BINDING-->
+<img [src]="image" style="height:100px;width:100px;">
+<br>
+<!--EVENT BINDING-->
+<button (click)="onClick()" >CLICK</button>
+<br>
+<button (click)="onClick1()" >CLICK1</button>
+<br>
+<br>
+<!--TWO-WAY BINDING-->
+Enter your Name:
+<input [(ngModel)]="info" type="text">
+<p>{{info}}</p>
+<h3>{{info}}</h3>
+
+<!--*ngFor-->
+<ul>
+    <li *ngFor="let movie of Movies" [style.color]="'green'">
+      {{ movie.name }}
+    </li>
+  </ul>
+
+<!--Hide Movie List-->
+<button (click)="hideList()">
+    Click to Hide List
+</button>
+
+<!--*ngIf-->
+<ul *ngIf="isVisible" [style.color]="'purple'">
+    <li *ngFor="let item of Movies">
+      {{ item.name }} 
+    </li>
+  </ul>
+
+<!--PIPES-->
+<h3>
+
+    Date: {{ dateToday  }} <br>
+
+    Date Pipe: {{ dateToday | date | uppercase}}<br>
+
+    Date Pipe: {{ dateToday | date: 'short' | lowercase}} <br>
+
+    Name: {{ name | uppercase}} <br>
+
+    Name: {{ name | slice:8}}
+
+</h3>
+<br>
+<!--STYLE BINDING-->
+<p [style.color]="'red'">RED COLOR</p>
+<p [style.background-color]="'yellow'">BACKGROUND COLOR AS YELLOW</p>
+<button [style.border]="'5px solid blue'">Save</button>
+<br>
+<br>
+<button [style.color]="status=='error' ? 'red': 'blue'">Button 1</button>
+<br>
+<br> 
+<button [style.color]="status=='error1' ? 'red': 'blue'">Button 1</button>
+<br>
+<br> 
+<button [style.color]="getColor()">Button 2</button> 
+<br>
+<br>
+<button [style.font-size.px]="'20'" >Large Button</button>
+<br>
+<br>
+<!--MULTIPLE STYLES-->
+<p [style.color]="getColor()" 
+   [style.font-size.px]="'20'"      
+   [style.background-color]="status=='error' ? 'red': 'blue'">
+   paragraph with multiple styles
+</p>
+
+<ul>
+    <li *ngFor="let course of courses" [style.color]="course.color">
+      {{ course.name }}
+    </li>
+  </ul>
+  <br>
+  <li *ngFor="let course of courses" 
+  [ngStyle]="{'color': course.color, 'font-size':'24px'}"> 
+    {{ course.name }}
+  </li>
+<br>
+  <!--ngSwitch-->
+  <ul [ngSwitch]="superhero" [ngStyle]="{'color':'purple','font-size':'24px'}">
+    <li *ngSwitchCase="'Groot'">Groot</li>
+    <li *ngSwitchCase="'Ironman'">Ironman</li>
+    <li *ngSwitchCase="'Hulk'">Hulk</li>
+    <li *ngSwitchCase="'Thor'">Thor</li>
+    <li *ngSwitchCase="'Spiderman'">Spiderman</li>
+    <li *ngSwitchDefault>Batman</li>
+  </ul>
+
+  <br>
+  <div *ngFor="let car of Cars" [ngSwitch]="car.color" style="margin-left: 100px;font-size: larger;">
+    <div *ngSwitchCase="'blue'"
+        class="blue">
+      {{ car.name }} ({{ car.color }})
+    </div>
+    <div *ngSwitchCase="'yellow'"
+        class="yellow">
+      {{ car.name }} ({{ car.color }})
+    </div>
+    <div *ngSwitchCase="'silver'"
+        class="silver">
+      {{ car.name }} ({{ car.color }})
+    </div>
+    <div *ngSwitchCase="'red'"
+        class="red">
+      {{ car.name }} ({{ car.color }})
+    </div>
+    <div *ngSwitchDefault
+        class="text-warning">
+      {{ car.name }} ({{ car.color }})
+    </div>
+  </div>`
