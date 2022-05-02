@@ -17,23 +17,24 @@
 <br>
 <!--TWO-WAY BINDING-->
 Enter your Name:
+<!--ngModel->include FormsModule-->
 <input [(ngModel)]="info" type="text">
 <p>{{info}}</p>
 <h3>{{info}}</h3>
 
 <!--*ngFor-->
 <ul>
-    <li *ngFor="let movie of Movies" [style.color]="'green'">
+    <li *ngFor="let movie of Movies" [style.color]="'blue'">
       {{ movie.name }}
     </li>
   </ul>
 
-<!--Hide Movie List-->
+<!--Hide Movie List using Event Binding-->
 <button (click)="hideList()">
     Click to Hide List
 </button>
 
-<!--*ngIf-->
+<!--*ngIf is checking the value of isvisible property-->
 <ul *ngIf="isVisible" [style.color]="'purple'">
     <li *ngFor="let item of Movies">
       {{ item.name }} 
@@ -45,38 +46,40 @@ Enter your Name:
 
     Date: {{ dateToday  }} <br>
 
-    Date Pipe: {{ dateToday | date | uppercase}}<br>
+    Date Pipe: {{ dateToday | date | lowercase}}<br>
 
     Date Pipe: {{ dateToday | date: 'short' | lowercase}} <br>
 
     Name: {{ name | uppercase}} <br>
 
-    Name: {{ name | slice:8}}
+    Name: {{ name | slice:8 | uppercase}}<br>
+
+    Currency: {{amount | currency:'INR'}}
 
 </h3>
 <br>
 <!--STYLE BINDING-->
 <p [style.color]="'red'">RED COLOR</p>
 <p [style.background-color]="'yellow'">BACKGROUND COLOR AS YELLOW</p>
-<button [style.border]="'5px solid blue'">Save</button>
+<button [style.border]="'2px dashed blue'">Save</button>
 <br>
 <br>
-<button [style.color]="status=='error' ? 'red': 'blue'">Button 1</button>
+<button [style.color]="status=='error1' ? 'red': 'blue'">Button 1</button>
 <br>
 <br> 
-<button [style.color]="status=='error1' ? 'red': 'blue'">Button 1</button>
+<button [style.color]="status=='error' ? 'red': 'blue'">Button 1</button>
 <br>
 <br> 
 <button [style.color]="getColor()">Button 2</button> 
 <br>
 <br>
-<button [style.font-size.px]="'20'" >Large Button</button>
+<button [style.font-size.px]="'24'" >Large Button</button>
 <br>
 <br>
 <!--MULTIPLE STYLES-->
 <p [style.color]="getColor()" 
    [style.font-size.px]="'20'"      
-   [style.background-color]="status=='error' ? 'red': 'blue'">
+   [style.background-color]="status=='error1' ? 'red': 'blue'">
    paragraph with multiple styles
 </p>
 
@@ -87,11 +90,11 @@ Enter your Name:
   </ul>
   <br>
   <li *ngFor="let course of courses" 
-  [ngStyle]="{'color': course.color, 'font-size':'24px'}"> 
+  [ngStyle]="{'color': course.color, 'font-size':'20px'}"> 
     {{ course.name }}
   </li>
 <br>
-  <!--ngSwitch-->
+  <!--*ngSwitch-->
   <ul [ngSwitch]="superhero" [ngStyle]="{'color':'purple','font-size':'24px'}">
     <li *ngSwitchCase="'Groot'">Groot</li>
     <li *ngSwitchCase="'Ironman'">Ironman</li>
@@ -105,7 +108,7 @@ Enter your Name:
   <div *ngFor="let car of Cars" [ngSwitch]="car.color" style="margin-left: 100px;font-size: larger;">
     <div *ngSwitchCase="'blue'"
         class="blue">
-      {{ car.name }} ({{ car.color }})
+      {{ car.name }} {{ car.average }} ({{ car.color }})
     </div>
     <div *ngSwitchCase="'yellow'"
         class="yellow">

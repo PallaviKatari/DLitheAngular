@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title="I am the Home Component";
-  course="Welcome to Angular Training";
+  course="Hello Trainees";
 
   //Property Binding
-  public image="/assets/images/IMG1.jpg";
+  public image="/assets/images/img3.jpg";
 
   //Event Binding
   onClick()
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   //Two-way binding
-  info="John Doe"
+  info=""
   
   //*ngFor
   Movies: any[] = [
@@ -46,6 +46,9 @@ export class HomeComponent implements OnInit {
     }, 
     {
       "name": "Cindrella"
+    },
+    {
+      "name": "Avatar 2"
     }
   ];
 
@@ -59,7 +62,7 @@ export class HomeComponent implements OnInit {
   status:string='error';
 
   getColor() {
-    return 'pink';
+    return 'black';
   }
 
   public isCourse = true;
@@ -72,7 +75,7 @@ courses = [
     {
       name: "Understanding APIs",
       level: "Beginner",
-      color: "green"
+      color: "blue"
     },
     {
       name: "Introduction to Docker Containers",
@@ -87,12 +90,12 @@ courses = [
     {
       name: "Algorithms and Data Structures",
       level: "Advanced",
-      color: "red"
+      color: "purple"
     },
     {
       name: "My first HTML page",
       level: "Beginner",
-      color: "green"
+      color: "blue"
     },
     {
       name: "Ways to use CSS in your web page",
@@ -144,13 +147,17 @@ courses = [
   dateToday: string | undefined;
 
   name: string | undefined;
+
+  amount: number|undefined;
   
   constructor() { }
 
   ngOnInit(): void {
     this.dateToday = new Date().toDateString();
 
-    this.name = "Angular Training"
+    this.name = "Angular Training";
+
+    this.amount=100;
   }
 
 }

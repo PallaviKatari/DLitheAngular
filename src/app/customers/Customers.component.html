@@ -15,7 +15,7 @@
                         <i class="m-2" [ngClass] = "getClass()" (click)="showUserDetailsToggle()"></i>                       
                     </div>
                     <div [hidden]="userDetail" >
-                        <p>{{item.username}}</p>
+                        <p>{{item.username | uppercase}}</p>
                         <p>{{item.email}}</p>
                         <p>{{item.phone}}</p>
                         <p>{{item.address.city}}</p>
