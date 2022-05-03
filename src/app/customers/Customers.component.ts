@@ -7,8 +7,8 @@ import { CustomerService } from '../Customer.service';
 })
 export class CustomersComponent implements OnInit {
   users: any[];
-  constructor(private _studentService: CustomerService) {
-      this.users = this._studentService.getCustomer();
+  constructor(private _customerService: CustomerService) {
+      this.users = this._customerService.getCustomer();
   }
 
   @Input()user!:any;
