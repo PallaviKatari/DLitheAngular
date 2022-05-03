@@ -1,3 +1,4 @@
+<!-- iterate through all the JSON data from the customer.service.ts -->
 <div *ngFor="let item of users" style="margin-top: auto;">
 <div class="row">
     <div class="col-lg-3">
@@ -7,13 +8,16 @@
         <div class="card-body col-lg-12">
             <div class="row" style="border: solid;border-color: rgb(8, 8, 8);margin-top: 50px;" >
                 <div class="col-lg-5">
+                    <!-- PROPERTY BINDING -->
                     <img [src]="item.image">
                 </div>
                 <div class="col-lg-7" style="margin-top: 30px;">
                     <div>
+                        <!-- CLASS BINDING-ngClass,EVENT BINDING-(click),PIPES -->
                         {{item.name.firstname+ " " + item.name.lastname | uppercase}} 
                         <i class="m-2" [ngClass] = "getClass()" (click)="showUserDetailsToggle()"></i>                       
                     </div>
+                    <!-- TOGGLE EFFECT - SHOW AND HIDE CUSTOMERS DETAILS -->
                     <div [hidden]="userDetail" >
                         <p>{{item.username | uppercase}}</p>
                         <p>{{item.email}}</p>
