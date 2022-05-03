@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CustomersComponent } from './customers/Customers.component';
+//import { CustomersComponent } from './customers/Customers.component';
 
 @Injectable({
   providedIn: 'root'
@@ -184,6 +184,106 @@ export class CustomerService {
           "lastname": "hale"
         },
         "phone": "1-678-456-1934",
+       
+      },
+      {
+        "address": {
+      
+          "city": "fort wayne",
+          "street": "oak lawn ave",
+          "number": 526,
+          "zipcode": "10256-4532"
+        },
+        "id": 10,
+        "email": "jimmie@gmail.com",
+        "username": "jimmie_k",
+        "password": "klein*#%*",
+        "image":"https://www.pepperhub.in/wp-content/uploads/2020/11/user-male.png",
+        "name": {
+          "firstname": "jimmie",
+          "lastname": "klein"
+        },
+        "phone": "1-104-001-4567",
+       
+      },
+      {
+        "address": {
+      
+          "city": "fort wayne",
+          "street": "oak lawn ave",
+          "number": 526,
+          "zipcode": "10256-4532"
+        },
+        "id": 10,
+        "email": "jimmie@gmail.com",
+        "username": "jimmie_k",
+        "password": "klein*#%*",
+        "image":"https://www.pepperhub.in/wp-content/uploads/2020/11/user-male.png",
+        "name": {
+          "firstname": "jimmie",
+          "lastname": "klein"
+        },
+        "phone": "1-104-001-4567",
+       
+      },
+      {
+        "address": {
+      
+          "city": "fort wayne",
+          "street": "oak lawn ave",
+          "number": 526,
+          "zipcode": "10256-4532"
+        },
+        "id": 10,
+        "email": "jimmie@gmail.com",
+        "username": "jimmie_k",
+        "password": "klein*#%*",
+        "image":"https://www.pepperhub.in/wp-content/uploads/2020/11/user-male.png",
+        "name": {
+          "firstname": "jimmie",
+          "lastname": "klein"
+        },
+        "phone": "1-104-001-4567",
+       
+      },
+      {
+        "address": {
+      
+          "city": "fort wayne",
+          "street": "oak lawn ave",
+          "number": 526,
+          "zipcode": "10256-4532"
+        },
+        "id": 10,
+        "email": "jimmie@gmail.com",
+        "username": "jimmie_k",
+        "password": "klein*#%*",
+        "image":"https://www.pepperhub.in/wp-content/uploads/2020/11/user-male.png",
+        "name": {
+          "firstname": "jimmie",
+          "lastname": "klein"
+        },
+        "phone": "1-104-001-4567",
+       
+      },
+      {
+        "address": {
+      
+          "city": "fort wayne",
+          "street": "oak lawn ave",
+          "number": 526,
+          "zipcode": "10256-4532"
+        },
+        "id": 10,
+        "email": "jimmie@gmail.com",
+        "username": "jimmie_k",
+        "password": "klein*#%*",
+        "image":"https://www.pepperhub.in/wp-content/uploads/2020/11/user-male.png",
+        "name": {
+          "firstname": "jimmie",
+          "lastname": "klein"
+        },
+        "phone": "1-104-001-4567",
        
       },
       {
