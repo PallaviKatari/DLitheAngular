@@ -1,0 +1,22 @@
+<div class="col-lg-5" >
+    <img [src]="product.image" style="height: 100%;width: 100%;">
+</div>
+<div class="col-lg-7">
+    <div style="color:blue">
+        {{product.title | uppercase}}<br>
+        {{product.category}}<br>
+        {{product.rating.count}}<br>
+        {{product.rating.rate}}<br>
+    </div>
+    <div>
+        <span style="background-color:rgb(242, 197, 220);">{{product.price|currency:'INR'}}</span>
+    </div>
+    <br>
+    <br>
+</div>
+<hr>
+<br>
+               
+              
+            
+     
