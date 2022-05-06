@@ -1,3 +1,4 @@
+//ng g s Customer
 import { Injectable } from '@angular/core';
 //import { CustomersComponent } from './customers/Customers.component';
 
