@@ -5,4 +5,5 @@ export class Trainee {
     id: Number | undefined;
     name: string | undefined;
     designation: string | undefined;
+    url:string|undefined;
 }

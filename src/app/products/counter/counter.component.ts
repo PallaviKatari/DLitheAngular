@@ -18,7 +18,7 @@ export class CounterComponent implements OnInit {
  count =1;  
   
   receivecount($event: number) {  
-  this.count = $event;  
+  this.count = $event;//5  
   }  
   
   constructor() { }

@@ -24,54 +24,63 @@ export class TraineeService {
 trainees: Trainee[] = [{
     id: 1,
     name: 'Anoop',
-    designation:'Developer'
+    designation:'Developer',
+    url:'https://www.google.co.in/'
 },
 {
     id: 2,
     name: 'Abhishek Soman',
-    designation:'Developer'
+    designation:'Developer',
+    url:''
 
 },
 {
   id: 3,
   name: 'Ameen',
-  designation:'Angular Developer'
+  designation:'Angular Developer',
+  url:''
 
 },
 {
   id: 4,
   name: 'Roja',
-  designation:'Angular Developer'
+  designation:'Angular Developer',
+  url:''
 
 },
 {
   id: 5,
   name: 'Shashank',
-  designation:'Angular Developer'
+  designation:'Angular Developer',
+  url:''
 
 },
 {
   id: 6,
   name: 'Veeresh',
-  designation:'Angular Developer'
+  designation:'Angular Developer',
+  url:''
 
 },
 {
   id: 7,
   name: 'Venkatesh',
-  designation:'Angular Developer'
+  designation:'Angular Developer',
+  url:''
 
 },
 {
   id: 8,
   name: 'Pradeep',
-  designation:'Developer'
+  designation:'Developer',
+  url:''
 
 },
 {
     id: 9,
     name: 'Abhishek S',
-    designation:'Developer'
+    designation:'Developer',
+    url:''
 
 }];
 

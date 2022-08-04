@@ -19,4 +19,9 @@ export class ContactComponent implements OnInit {
         });
     }
 
+    onclick()
+    {
+      
+    }
+
 }
