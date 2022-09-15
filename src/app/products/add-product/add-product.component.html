@@ -1,76 +1,83 @@
-<div class="container " >
-    
-            <form  #addProductForm = "ngForm" (load)="addProductForm.form.reset()" 
-            (ngSubmit) = "onClickSubmit(addProductForm)" >
-                <div class="form-group col-lg-12 " >
-                  <label for="title">Product Title</label>
-                  <input type="text" id="title" name="title" style="width:400px" class="form-control 
-                  ng-untouch ng-pristine ng-invalid" placeholder = "product title" [(ngModel)]="product.title"
-                   minlength="4" #title="ngModel" required>
-                 
-                </div>
-                <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger mt-2">
-                    <div *ngIf="title.errors?.['required']">
-                        Title is required.
-                      </div>
-                      <div *ngIf="title.errors?.['minlength']">
-                        Title must be at least 4 characters long.
-                      </div>
-                      
-                  </div>
-                
-                <div class="form-group col-lg-12">
-                  <label for="price">Product Price</label>
-                  <input style="width:400px" type="text" class="form-control" id="price" name ="price" placeholder ="price" 
-                  [(ngModel)]="product.price" required  minlength="1" #price="ngModel"> 
-                </div>
-                <div *ngIf="price.invalid && (price.dirty || price.touched)" class="alert alert-danger mt-2">
-                    <div *ngIf="price.errors?.['required']">
-                        price is required.
-                      </div>
-                      <div *ngIf="price.errors?.['minlength']">
-                        price must be at least 1 characters long.
-                      </div>
-                      
-                  </div>
-                <div class="form-group col-lg-12">
-                    <label for="description">Product description</label>
-                    <input style="width:400px" type="text" class="form-control" name = "description" 
-                    placeholder = "description" [(ngModel)]="product.description" minlength="4" 
-                    required #description="ngModel">
-                </div>
-                <div *ngIf="description.invalid && (description.dirty || description.touched)" 
-                class="alert alert-danger mt-2">
-                    <div *ngIf="description.errors?.['required']">
-                        description is required.
-                      </div>
-                      <div *ngIf="description.errors?.['minlength']">
-                        description must be at least 4 characters long.
-                      </div>
-                      
-                  </div>
-                <div class="form-group col-lg-12">
-                    <label for="category">Product category</label>
-                    <input style="width:400px" type="text" class="form-control" name = "category"
-                     placeholder = "category" [(ngModel)]="product.category"  minlength="4" 
-                     required #category="ngModel">
-                </div>
-                <div *ngIf="category.invalid && (category.dirty || category.touched)"
-                 class="alert alert-danger mt-2">
-                    <div *ngIf="category.errors?.['required']">
-                        Name is required.
-                      </div>
-                      <div *ngIf="category.errors?.['minlength']">
-                        Name must be at least 4 characters long.
-                      </div>
-                      
-                  </div>
-                <div style="margin-left: 150px;">
-                    <button type="submit" name="submit" class="btn btn-primary" 
-                    [disabled]="addProductForm.form.invalid">Submit</button>
-                </div>
-               
-              </form>
-        </div>
+<div class="container ">
 
- 
+  <form #addProductForm="ngForm" (load)="addProductForm.form.reset()" (ngSubmit)="onClickSubmit(addProductForm)">
+    <div class="form-group col-lg-12 ">
+      <label for="title">Product Title</label>
+      <input type="text" id="title" name="title" style="width:400px" class="form-control 
+                  ng-untouch ng-pristine ng-invalid" placeholder="product title" [(ngModel)]="product.title"
+        minlength="4" #title="ngModel" required>
+
+    </div>
+    <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger mt-2">
+      <div *ngIf="title.errors?.['required']">
+        Title is required.
+      </div>
+      <div *ngIf="title.errors?.['minlength']">
+        Title must be at least 4 characters long.
+      </div>
+
+    </div>
+
+    <div class="form-group col-lg-12">
+      <label for="price">Product Price</label>
+      <input style="width:400px" type="text" class="form-control" id="price" name="price" placeholder="price"
+        [(ngModel)]="product.price" required minlength="1" #price="ngModel">
+    </div>
+    <div *ngIf="price.invalid && (price.dirty || price.touched)" class="alert alert-danger mt-2">
+      <div *ngIf="price.errors?.['required']">
+        price is required.
+      </div>
+      <div *ngIf="price.errors?.['minlength']">
+        price must be at least 1 characters long.
+      </div>
+
+    </div>
+    <div class="form-group col-lg-12">
+      <label for="description">Product description</label>
+      <input style="width:400px" type="text" class="form-control" name="description" placeholder="description"
+        [(ngModel)]="product.description" minlength="4" required #description="ngModel">
+    </div>
+    <div *ngIf="description.invalid && (description.dirty || description.touched)" class="alert alert-danger mt-2">
+      <div *ngIf="description.errors?.['required']">
+        description is required.
+      </div>
+      <div *ngIf="description.errors?.['minlength']">
+        description must be at least 4 characters long.
+      </div>
+
+    </div>
+    <div class="form-group col-lg-12">
+      <label for="category">Product category</label>
+      <input style="width:400px" type="text" class="form-control" name="category" placeholder="category"
+        [(ngModel)]="product.category" minlength="4" required #category="ngModel">
+    </div>
+    <div *ngIf="category.invalid && (category.dirty || category.touched)" class="alert alert-danger mt-2">
+      <div *ngIf="category.errors?.['required']">
+        Name is required.
+      </div>
+      <div *ngIf="category.errors?.['minlength']">
+        Name must be at least 4 characters long.
+      </div>
+
+    </div>
+    <div class="form-group col-lg-12">
+      <label for="image">Product image</label>
+      <input style="width:400px" type="text" class="form-control" name="image" placeholder="image"
+        [(ngModel)]="product.image" minlength="4" required #image="ngModel">
+    </div>
+    <div *ngIf="image.invalid && (image.dirty || image.touched)" class="alert alert-danger mt-2">
+      <div *ngIf="image.errors?.['required']">
+        URL is required.
+      </div>
+      <div *ngIf="category.errors?.['minlength']">
+        Name must be at least 4 characters long.
+      </div>
+
+    </div>
+    <div style="margin-left: 150px;">
+      <button type="submit" name="submit" class="btn btn-primary"
+        [disabled]="addProductForm.form.invalid">Submit</button>
+    </div>
+
+  </form>
+</div>

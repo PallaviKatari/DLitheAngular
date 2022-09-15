@@ -32,7 +32,7 @@ export class AddProductComponent implements OnInit {
     this.product.price=data.value.price;
     this.product.description=data.value.description;
     this.product.category=data.value.category;
-    this.product.image= "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg";
+    this.product.image= data.value.image;
     this.addProducts.emit(this.product); 
 
   }
